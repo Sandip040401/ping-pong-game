@@ -1,0 +1,75 @@
+body {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: linear-gradient(rgb(133, 250, 133), rgb(234, 234, 49), grey);
+}
+
+.game-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden; /* Ensure the ball doesn't go outside the game container */
+}
+
+.rod {
+  position: absolute;
+  width: 150px; /* Make the rods longer */
+  height: 18px;
+  background-color: #3498db;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff; /* Text color */
+  font-size: 16px; /* Text font size */
+  font-weight: bold; /* Text font weight */
+  border-radius: 5px;
+  border: solid black 1px;
+}
+
+#topRod {
+  top: 0;
+}
+
+#bottomRod {
+  bottom: 0;
+}
+
+.ball {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: #e74c3c;
+  border-radius: 50%;
+}
+/* Add these styles at the end of style.css */
+
+/* Add these styles at the end of style.css */
+
+#scores-tab {
+  position: absolute;
+  top: 10%;
+  left: 5%; /* Adjust the left position as needed */
+  transform: translate(-50%, -50%);
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.205
+  ); /* Semi-transparent white background */
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  transition: opacity 0.5s ease; /* Add transition for smooth visibility */
+}
+
+#scores-tab h2 {
+  margin-bottom: 10px;
+}
+
+.hidden {
+  opacity: 0;
+  pointer-events: none; /* Ensure that hidden element is not interactive */
+}
